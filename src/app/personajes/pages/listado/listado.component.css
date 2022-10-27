@@ -40,9 +40,8 @@ button{
 }
 
 .card{
-    height: 200px;
+    height: 240px;
     width: 350px;
-    min-width: 300px;
     background-color: azure;
     margin: 5px;
     display: flex;

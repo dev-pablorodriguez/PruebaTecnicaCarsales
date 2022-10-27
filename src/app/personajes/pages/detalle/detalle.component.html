@@ -1,1 +1,21 @@
-<p>detalle personajes works!</p>
+<div class="pageWrapper">
+    <div *ngIf="personaje; else noEncontrado">
+        <img src="{{ personaje.image }}"/>
+        <div class="cardText">
+            <p>ID: {{ personaje.id }}</p>
+            <p>Nombre: {{ personaje.name }}</p>
+            <p>Especie: {{ personaje.species }}</p>
+            <p>Sexo: {{ personaje.gender }}</p>
+            <p>Origen: {{ personaje.origin.name }}</p>
+            <p>Estado: {{ personaje.status }}</p>
+            <p>Episodios: {{ personaje.episode.length }}</p>
+        </div>
+    </div>
+
+    <ng-template #noEncontrado>
+        Personaje no encontrado
+    </ng-template>
+
+
+    <button routerLink="">🡠 Volver</button>
+</div>

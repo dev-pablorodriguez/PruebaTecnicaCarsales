@@ -6,7 +6,7 @@
 </div>
 
 <div class="cardWrapper">
-    <div class="card" *ngFor="let item of personajes">
+    <div routerLink="personajes/{{ item.id }}" class="card" *ngFor="let item of personajes">
         <img src="{{ item.image }}"/>
 
         <div class="cardText">
