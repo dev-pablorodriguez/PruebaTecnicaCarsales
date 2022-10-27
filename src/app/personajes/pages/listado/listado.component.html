@@ -1,1 +1,5 @@
 <p>listado personajes works!</p>
+
+<button *ngIf="prevPage" (click)="buscarPersonajes(prevPage)"><- {{ prevPage }}</button>
+<label *ngIf="currentPage">{{ currentPage }}</label>
+<button *ngIf="nextPage" (click)="buscarPersonajes(nextPage)">{{ nextPage }} -></button>
