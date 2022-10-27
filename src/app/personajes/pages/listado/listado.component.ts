@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Personaje } from '../../interfaces/personajes.interfaces';
 import { PersonajesService } from '../../services/personajes.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class ListadoComponent implements OnInit {
   currentPage: number = 1;
   prevPage: number | null = null;
   nextPage: number | null = null;
+  personajes: Personaje[] = [];
 
   constructor(private personajesService: PersonajesService) { }
 
@@ -26,6 +28,7 @@ export class ListadoComponent implements OnInit {
         this.currentPage = page;
         this.prevPage = this.getPageNumber(response.info.prev);
         this.nextPage = this.getPageNumber(response.info.next);
+        this.personajes = response.results;
       }
       , error => { console.log(error) });
   }

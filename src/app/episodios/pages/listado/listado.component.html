@@ -1,1 +1,20 @@
-<p>listado episodios works!</p>
+
+<div class="paginationWrapper">
+    <div class="paginationButton"><button *ngIf="prevPage" (click)="buscarPersonajes(prevPage)">< {{ prevPage }}</button></div>
+    <div class="paginationLabel">Página {{ currentPage }}</div>
+    <div class="paginationButton"><button *ngIf="nextPage" (click)="buscarPersonajes(nextPage)">{{ nextPage }} ></button></div>
+</div>
+
+<div class="cardWrapper">
+    <div class="card" *ngFor="let item of episodios">
+        <!-- <img src="{{ item.image }}"/> -->
+
+        <div class="cardText">
+            <!-- <p>Número: {{ item.id }}</p>
+            <p>Nombre: {{ item.name }}</p>
+            <p>Episodio: {{ item.episode }}</p> -->
+            <p>Publicado: {{ item.air_date }}</p>
+            <p>Publicado: {{ item.air_date | date:'fullDate' }}</p>
+        </div>
+    </div>
+</div>

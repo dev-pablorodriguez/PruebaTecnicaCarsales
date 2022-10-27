@@ -1,5 +1,18 @@
-<p>listado personajes works!</p>
 
-<button *ngIf="prevPage" (click)="buscarPersonajes(prevPage)"><- {{ prevPage }}</button>
-<label *ngIf="currentPage">{{ currentPage }}</label>
-<button *ngIf="nextPage" (click)="buscarPersonajes(nextPage)">{{ nextPage }} -></button>
+<div class="paginationWrapper">
+    <div class="paginationButton"><button *ngIf="prevPage" (click)="buscarPersonajes(prevPage)">< {{ prevPage }}</button></div>
+    <div class="paginationLabel">Página {{ currentPage }}</div>
+    <div class="paginationButton"><button *ngIf="nextPage" (click)="buscarPersonajes(nextPage)">{{ nextPage }} ></button></div>
+</div>
+
+<div class="cardWrapper">
+    <div class="card" *ngFor="let item of personajes">
+        <img src="{{ item.image }}"/>
+
+        <div class="cardText">
+            <p>Nombre: {{ item.name }}</p>
+            <p>Especie: {{ item.species }}</p>
+            <p>Sexo: {{ item.gender }}</p>
+        </div>
+    </div>
+</div>
