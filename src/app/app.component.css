@@ -5,6 +5,11 @@
     max-height: 100%;
 }
 
+.sidebar{
+    background-color: #1A2A7E;
+    width: 300px;    
+}
+
 .container{
     background-color: azure;
     margin-left: 20px;
@@ -14,8 +19,14 @@
     align-content: flex-start;
 }
 
-.sidebar{
-    background-color: #1A2A7E;
-    width: 300px;    
+.card{
+    height: 200px;
+    width: 300px;
+    min-width: 300px;
+    background-color: antiquewhite;
+    margin: 5px;
+    display: flex;
+    border-radius: 3%;
+    border: 1px solid #121F61;
 }
 
