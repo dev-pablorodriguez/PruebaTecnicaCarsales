@@ -1,0 +1,21 @@
+.wrapper{
+    display: flex;
+    height: 900px;
+    min-height: 600px;
+    max-height: 100%;
+}
+
+.container{
+    background-color: azure;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 300px);
+    align-content: flex-start;
+}
+
+.sidebar{
+    background-color: #1A2A7E;
+    width: 300px;    
+}
+
